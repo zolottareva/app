@@ -10,7 +10,7 @@ import Step2 from './Views/Step2'
 import RestorePassword from './Views/RestorePassword'
 export default function App() {
   return (
-      <RestorePassword/>
+      <Authorization/>
   );
 }
 
