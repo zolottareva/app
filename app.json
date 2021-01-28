@@ -1,0 +1,12 @@
+{
+  "name": "managerProject",
+  "displayName": "managerProject",
+  "expo": {
+    "name": "managerProject",
+    "slug": "managerProject",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
