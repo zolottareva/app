@@ -32,7 +32,7 @@ function RestorePassword() {
           labelStyle={styles.blackText}
           ref={inputEmail}
           placeholder="example@gmail.com"
-          onChangeText={(text) => setPassword(text)}
+          onChangeText={(text) => setEmail(text)}
         />
         <Button
           titleStyle={styles.blackText}
@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   enterEmail: {
-      fontSize: 15,
-      marginBottom: 10,
+      fontSize: 17,
+      marginBottom: 20,
   },
   signInText: {
     textDecorationLine: 'underline',

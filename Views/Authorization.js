@@ -6,6 +6,7 @@ import {
     TouchableWithoutFeedback,
 } from 'react-native';
 import {Input, Text, Button} from 'react-native-elements';
+import MenuBar from '../Components/MenuBar'
 
 function Authorization({navigation}) {
 
@@ -30,6 +31,7 @@ function Authorization({navigation}) {
     return (
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
             <View style={styles.form}>
+            <MenuBar onPress={navigation.toggleDrawer}/>
                 <Text h2 style={styles.registrationText}>
                     Вход
                 </Text>

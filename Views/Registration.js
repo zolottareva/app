@@ -6,7 +6,9 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import {Input, Text, Button} from 'react-native-elements';
-
+import {FontAwesome5} from '@expo/vector-icons'
+import MenuBar from '../Components/MenuBar'
+import Authorization from './Authorization';
 const inputEmail = React.createRef();
 const inputPassword = React.createRef();
 function Registration({navigation}) {
@@ -25,6 +27,7 @@ function Registration({navigation}) {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.form}>
+        <MenuBar onPress={navigation.toggleDrawer}/>
         <Text h2 h2Style={styles.registrationText}>
           Регистрация
         </Text>
@@ -52,7 +55,7 @@ function Registration({navigation}) {
         />
         <View style={styles.alreadyHaveAnAccount}>
           <Text>Уже есть аккаунт?</Text>
-          <Text style={styles.signInText}> Войти</Text>
+          <Text style={styles.signInText} onPress = {()=>{navigation.navigate(Authorization)}}> Войти</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>
