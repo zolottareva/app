@@ -1,3 +1,4 @@
+import { useNavigationBuilder } from '@react-navigation/native';
 import React, {useRef, useState} from 'react';
 import {
     View,
@@ -7,7 +8,7 @@ import {
 } from 'react-native';
 import {Input, Text, Button} from 'react-native-elements';
 import MenuBar from '../Components/MenuBar'
-
+import Registration from './Registration';
 function Authorization({navigation}) {
 
     const emailRef = useRef();
@@ -57,14 +58,12 @@ function Authorization({navigation}) {
                     title="Зарегистрироваться"
                     onPress={onPressSubmitButton}
                 />
-                <View>
-                    <View style={styles.centeredContent}>
-                        <Text>Нет аккаунта?</Text>
-                        <Text style={styles.signInText}> Зарегистрируйтесь</Text>
-                    </View>
-                    <View style={styles.centeredContent}>
-                        <Text>Забыли пароль?</Text>
-                    </View>
+                <View style={styles.centeredContent}>
+                    <Text>Нет аккаунта?</Text>
+                    <Text style={styles.signInText} onPress={()=> navigation.navigate(Registration)}> Зарегистрируйтесь</Text>
+                </View>
+                <View style={styles.centeredContent}>
+                    <Text>Забыли пароль?</Text>
                 </View>
             </View>
         </TouchableWithoutFeedback>
@@ -77,7 +76,6 @@ const styles = StyleSheet.create({
     centeredContent: {
         justifyContent: 'center',
         marginTop: 10,
-        flex: 1,
         flexDirection: 'row',
     },
     forgotPassword: {
